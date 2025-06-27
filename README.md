@@ -1,23 +1,14 @@
-# 📘 Library Database - MySQL Project
+# 📚 Library Database (MySQL)
 
-This project demonstrates a simple **Library Management System** using MySQL. It includes creation of a table, insertion of sample data, and execution of various **aggregate queries** such as `SUM()`, `AVG()`, `COUNT()`, `GROUP BY`, and `HAVING`.
+This README contains a full MySQL session working with a `library` database. It demonstrates selecting the database, viewing records, and using SQL aggregate functions like `SUM()`, `AVG()`, `COUNT()`, `GROUP BY`, and `HAVING`.
 
 ---
 
-## 🗄️ Table Structure
-
-**Database Name:** `library`  
-**Table Name:** `library`
+## 🏁 Step 1: Select the Database
 
 ```sql
-CREATE DATABASE library;
-USE library;
+mysql> SELECT * FROM library;
+ERROR 1046 (3D000): No database selected
 
-CREATE TABLE library (
-    BookID INT PRIMARY KEY AUTO_INCREMENT,
-    Title VARCHAR(100),
-    Author VARCHAR(100),
-    Genre VARCHAR(50),
-    Year INT,
-    Copies INT
-);
+mysql> USE library;
+Database changed
